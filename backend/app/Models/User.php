@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Deed;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -19,8 +20,10 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'username',
         'password',
+        'role_id',
+        'office_id',
     ];
 
     /**
@@ -33,13 +36,33 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function deed()
+    {
+        return $this->hasMany(Deed::class, 'created_by');
+    }
+
+    public function sentComments()
+    {
+        return $this->hasMany(Deed_Comment::class, 'from_user_id');
+    }
+
+    // Comments sent to me
+    public function receivedComments()
+    {
+        return $this->hasMany(Deed_Comment::class, 'to_user_id');
+    }
+
+    public function office_id()
+    {
+        return $this->belongsTo(Office_Type::class, 'office_id');
+    }
     /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    //     'password' => 'hashed',
+    // ];
 }

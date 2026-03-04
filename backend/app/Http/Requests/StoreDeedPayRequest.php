@@ -56,7 +56,7 @@ class StoreDeedPayRequest extends FormRequest
             'contractor2_name' => 'required',
             'contractor2_nric_no' => 'required',
             'no_of_contractors2' => 'required',
-            'contactor2_father_name' => 'required',
+            'contractor2_father_name' => 'required',
             'contractor2_address' => 'required',
             // 'others_received' => 'required',
             'state_id' => 'required',
@@ -72,6 +72,7 @@ class StoreDeedPayRequest extends FormRequest
             'area' => 'required',
             'unit' => 'required',
             'other_property' => 'required',
+            'created_by' => 'required',
         ];
     }
 }

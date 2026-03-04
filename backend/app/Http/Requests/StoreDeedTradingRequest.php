@@ -72,6 +72,7 @@ class StoreDeedTradingRequest extends FormRequest
             'land_type' => 'required',
             'area' => 'required',
             'unit' => 'required',
+            'created_by' => 'required',
             'other_property' => 'required',
         ];
     }

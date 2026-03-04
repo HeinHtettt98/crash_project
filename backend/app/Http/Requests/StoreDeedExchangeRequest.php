@@ -86,6 +86,7 @@ class StoreDeedExchangeRequest extends FormRequest
             'area_2' => 'required',
             'unit_2' => 'required',
             'other_property_2' => 'required',
+            'created_by' => 'required',
         ];
     }
 }

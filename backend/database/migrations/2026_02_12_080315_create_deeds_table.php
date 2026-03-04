@@ -21,7 +21,7 @@ return new class extends Migration
 
             $table->text('contract_no')->nullable();
             $table->string('register_year')->nullable();
-            $table->char('book_no', 36)->nullable();
+            $table->text('book_no', 36)->nullable();
             $table->text('volume')->nullable();
 
             $table->date('register_date')->nullable();
@@ -106,7 +106,10 @@ return new class extends Migration
 
             $table->text('type_of_other_deed')->nullable();
             $table->text('file_path')->nullable();
-            $table->char('create_by', 36)->nullable();
+            $table->bigInteger('created_by')
+                ->nullable()
+                ->constrained()
+                ->cascadeOnDelete();
             $table->char('update_by', 36)->nullable();
 
             $table->timestamps();

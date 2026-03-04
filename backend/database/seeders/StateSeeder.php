@@ -14,14 +14,27 @@ class StateSeeder extends Seeder
     public function run(): void
 
     {
-        $state = [
+        $states = [
             ['name' => 'ရန်ကုန်တိုင်းဒေသကြီး', 'state_type_id' => 1],
             ['name' => 'မန္တလေးတိုင်းဒေသကြီး', 'state_type_id' => 1],
+            ['name' => 'စစ်ကိုင်းတိုင်းဒေသကြီး', 'state_type_id' => 1],
+            ['name' => 'မကွေးတိုင်းဒေသကြီး', 'state_type_id' => 1],
+            ['name' => 'ပဲခူးတိုင်းဒေသကြီး', 'state_type_id' => 1],
+            ['name' => 'ဧရာဝတီတိုင်းဒေသကြီး', 'state_type_id' => 1],
+            ['name' => 'တနင်္သာရီတိုင်းဒေသကြီး', 'state_type_id' => 1],
+
+            ['name' => 'ကချင်ပြည်နယ်', 'state_type_id' => 1],
+            ['name' => 'ကယားပြည်နယ်', 'state_type_id' => 1],
+            ['name' => 'ကရင်ပြည်နယ်', 'state_type_id' => 1],
+            ['name' => 'ချင်းပြည်နယ်', 'state_type_id' => 1],
+            ['name' => 'မွန်ပြည်နယ်', 'state_type_id' => 1],
+            ['name' => 'ရခိုင်ပြည်နယ်', 'state_type_id' => 1],
             ['name' => 'ရှမ်းပြည်နယ်', 'state_type_id' => 1],
-            ['name' => 'ကယားပြည်မယ်', 'state_type_id' => 1]
+
+            ['name' => 'နေပြည်တော်ပြည်ထောင်စုနယ်မြေ', 'state_type_id' => 2],
         ];
 
-        foreach ($state as $s) {
+        foreach ($states as $s) {
             State::firstOrCreate($s);
         }
     }

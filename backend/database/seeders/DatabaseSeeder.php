@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Database\Seeders\Deed_TypeSeeder;
+use Database\Seeders\Deed_SettingSeeder;
 use Database\Seeders\DistrictSeeder;
 use Database\Seeders\Office_TypeSeeder;
 use Database\Seeders\OfficeSeeder;
@@ -28,6 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StateSeeder::class);
         $this->call(DistrictSeeder::class);
         $this->call(TownshipSeeder::class);
+        $this->call(Deed_SettingSeeder::class);
 
         // \App\Models\User::factory(10)->create();
 

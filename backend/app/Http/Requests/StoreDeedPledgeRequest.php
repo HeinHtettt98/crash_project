@@ -72,6 +72,7 @@ class StoreDeedPledgeRequest extends FormRequest
             // 'area' => 'required',
             // 'unit' => 'required',
             'other_property' => 'required',
+            'created_by' => 'required',
         ];
     }
 }
